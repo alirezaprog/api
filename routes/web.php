@@ -14,7 +14,8 @@
 $router->group(['middleware' => ['auth', 'headers']], function () use ($router) {
     $router->get('/', function () {
         $result = [
-            'version' => env('APP_VERSION')
+            'version' => env('APP_VERSION'),
+            'Developer'=>"Mench123'
         ];
         return \App\Helpers\AppHelper::success($result);
     });
